@@ -1,0 +1,9 @@
+.app {
+  min-height: 100vh;
+  color: white;
+  background-color: #333333;
+}
+
+.search-form {
+  max-width: min(500px, calc(100% - 8px));
+}

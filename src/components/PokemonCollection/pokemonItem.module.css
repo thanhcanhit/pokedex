@@ -1,0 +1,73 @@
+.pokemon {
+  background-color: #717274;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  transition: all ease .15s;
+  cursor: pointer;
+}
+
+.pokemon:hover {
+  background-color: #66BB6A;
+}
+
+.pokemonImg {
+  max-width: 100px;
+  transition: all ease .3s;
+  filter: drop-shadow(8px 8px 4px rgba(0, 0, 0, 0.3));
+}
+
+.pokemon:hover .pokemonImg {
+  transform: translateY(-6px);
+  filter: drop-shadow(8px 14px 4px rgba(0, 0, 0, .3));
+}
+
+.pokemonId {
+  font-size: .75rem;
+  align-self: flex-start;
+  position: absolute;
+  top: 8px;
+  left: 8px;
+}
+
+.statusInfo {
+  display: none;
+  position: absolute;
+  bottom: -50%;
+  border-radius: 4px;
+  padding: 8px;
+  z-index: 1;
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(8.8px);
+  -webkit-backdrop-filter: blur(8.8px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.pokemon:hover .statusInfo {
+  display: flex;
+  animation: flip ease .5s;
+}
+
+@keyframes fly-up {
+  0% {
+    opacity: 0;
+    transform: translateY(30%);
+  }
+}
+
+@keyframes flip {
+  0% {
+     transform: perspective(400px) rotateY(270deg) rotateY(0);
+     animation-timing-function: ease-out;
+  }
+  70% {
+     transform: perspective(400px) rotateY(360deg) scale(.9);
+     animation-timing-function: ease-in;
+  }
+  100% {
+     transform: perspective(400px) scale(1);
+     animation-timing-function: ease-in;
+  }
+} 
