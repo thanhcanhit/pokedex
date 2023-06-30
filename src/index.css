@@ -1,3 +1,15 @@
 .pixel-font {
   font-family: 'DotGothic16', sans-serif;
 }
+
+body::-webkit-scrollbar {
+  width: 10px;
+}
+
+body::-webkit-scrollbar-track {
+  background-color: #fafafa;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #666666;
+}

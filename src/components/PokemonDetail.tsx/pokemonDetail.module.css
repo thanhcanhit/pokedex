@@ -16,6 +16,19 @@
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.3);
+  animation: show ease .5s;
+}
+
+.pokemonDetail::-webkit-scrollbar {
+  width: 10px;
+}
+
+.pokemonDetail::-webkit-scrollbar-track {
+  background-color: #fafafa;
+}
+
+.pokemonDetail::-webkit-scrollbar-thumb {
+  background-color: #383838;
 }
 
 .layer {
@@ -23,6 +36,7 @@
   inset: 0;
   background-color: rgba(0, 0, 0, 0.6);
   z-index: 2;
+  animation: show ease .5s;
 }
 
 .img {
@@ -30,4 +44,10 @@
   width: 150px;
   height: 150px;
   object-fit: contain;
+}
+
+@keyframes show {
+  0% {
+    opacity: 0;
+  }
 }
