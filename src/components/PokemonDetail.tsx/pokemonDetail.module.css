@@ -1,6 +1,6 @@
 .pokemonDetail {
   position: fixed;
-  width: min(800px, 100% - 16px) ;
+  width: min(1200px, 100% - 16px) ;
 
   max-height: calc(100vh - 80px);
   overflow: auto;

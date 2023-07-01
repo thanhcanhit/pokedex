@@ -243,7 +243,7 @@ const PokemonDetail = ({ pokemon, setOpenDetail }: PokemonDetailProps) => {
 				<div className="d-flex justify-content-center mb-2">
 					<button
 						type="button"
-						className="btn-close ms-auto"
+						className="btn-close ms-auto text "
 						onClick={() =>
 							setOpenDetail({ isOpen: false, pokemon: null })
 						}
