@@ -117,7 +117,7 @@ const PokemonDetail = ({ pokemon, setOpenDetail }: PokemonDetailProps) => {
 			<tbody>
 				<tr>
 					{pokemon.stats.map((item) => {
-						return <td>{item.base_stat}</td>;
+						return <td key={item.stat.name}>{item.base_stat}</td>;
 					})}
 				</tr>
 			</tbody>
@@ -181,7 +181,7 @@ const PokemonDetail = ({ pokemon, setOpenDetail }: PokemonDetailProps) => {
 			<tbody>
 				{pokemon.abilities.map((item) => {
 					return (
-						<tr>
+						<tr key={item.ability.name}>
 							<td className="text-center ">
 								{item.ability.name}
 							</td>

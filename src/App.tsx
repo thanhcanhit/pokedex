@@ -38,9 +38,9 @@ function App() {
 		function handleScrollEnd() {
 			if (
 				window.innerHeight + window.scrollY >=
-				document.body.offsetHeight
+				document.body.offsetHeight -1
 			) {
-				getPokemons(nextUrl);
+				if (!isLoading) getPokemons(nextUrl);
 			}
 		}
 
@@ -49,7 +49,7 @@ function App() {
 				window.scrollY + window.innerHeight >=
 				document.body.scrollHeight - 1
 			) {
-				getPokemons(nextUrl);
+				if (!isLoading) getPokemons(nextUrl);
 			}
 		}
 
@@ -65,7 +65,7 @@ function App() {
 				);
 			};
 		}
-	}, [isScrollLoading, nextUrl]);
+	}, [isScrollLoading, nextUrl, isLoading]);
 
 	// Loading dữ liệu lần đầu
 	useEffect(() => {
