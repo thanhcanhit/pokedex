@@ -49,7 +49,7 @@ const PokemonDetail = ({ pokemon, setOpenDetail }: PokemonDetailProps) => {
 			setEvolutionChain((prev) => [
 				...prev,
 				{
-					name,
+					name, 
 					imgPath: pokemon.sprites.front_default,
 				},
 			]);
@@ -106,7 +106,7 @@ const PokemonDetail = ({ pokemon, setOpenDetail }: PokemonDetailProps) => {
 							<th key={item.stat.name}>
 								<img
 									width={20}
-									src={`/stat-icon/${item.stat.name}.png`}
+									src={`stat-icon/${item.stat.name}.png`}
 									title={item.stat.name.toUpperCase()}
 								/>
 							</th>
