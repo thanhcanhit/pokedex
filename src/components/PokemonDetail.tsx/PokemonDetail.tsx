@@ -41,7 +41,7 @@ const PokemonDetail = ({ pokemon, setOpenDetail }: PokemonDetailProps) => {
 		}
 
 		// Get img from each evolution chain
-		evolution.forEach(async (name) => {
+		for (const name of evolution) {
 			const pokemonRes = await axios.get(
 				`https://pokeapi.co/api/v2/pokemon/${name}`
 			);
@@ -53,7 +53,7 @@ const PokemonDetail = ({ pokemon, setOpenDetail }: PokemonDetailProps) => {
 					imgPath: pokemon.sprites.front_default,
 				},
 			]);
-		});
+		}
 
 		setIsLoading(false);
 	}
@@ -221,7 +221,7 @@ const PokemonDetail = ({ pokemon, setOpenDetail }: PokemonDetailProps) => {
 							</td>
 							{index != evolutionChain.length - 1 && (
 								<td style={{ verticalAlign: "middle" }}>
-										<img src={arrowRightImg} />
+									<img src={arrowRightImg} />
 								</td>
 							)}
 						</Fragment>
