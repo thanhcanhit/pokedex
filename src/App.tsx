@@ -44,11 +44,25 @@ function App() {
 			}
 		}
 
+		function handleTouchMoveEnd() {
+			if (
+				window.scrollY + window.innerHeight >=
+				document.body.scrollHeight - 1
+			) {
+				getPokemons(nextUrl);
+			}
+		}
+
 		if (isScrollLoading) {
 			window.addEventListener("scroll", handleScrollEnd);
+			document.body.addEventListener("touchmove", handleTouchMoveEnd);
 
 			return () => {
 				window.removeEventListener("scroll", handleScrollEnd);
+				document.body.removeEventListener(
+					"touchmove",
+					handleTouchMoveEnd
+				);
 			};
 		}
 	}, [isScrollLoading, nextUrl]);
