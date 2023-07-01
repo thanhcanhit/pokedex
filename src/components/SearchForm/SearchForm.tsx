@@ -55,7 +55,7 @@ const SearchForm = ({
 							type="text"
 							className="form-control"
 							id="searchInput"
-							placeholder="Ex: 4, charmander, psyduck..."
+							placeholder="Ex: 1, 10, charmander, psyduck..."
 							value={searchText}
 							onChange={(e) => {
 								setIsNotFound(false);

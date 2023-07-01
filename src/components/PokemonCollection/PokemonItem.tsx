@@ -40,7 +40,7 @@ const PokemonItem = ({ pokemon, onClick }: PokemonItemProps) => {
 	));
 
 	return (
-		<div className="col-lg-2 col-md-3 col-sm-4 col-6" onClick={onClick}>
+		<div className="col-xl-2 col-lg-3 col-md-3 col-sm-4 col-6" onClick={onClick}>
 			<div className={style.pokemon + " p-2 my-2 shadow rounded"}>
 				<div>
 					<img

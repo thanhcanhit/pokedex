@@ -49,7 +49,7 @@ const PokemonDetail = ({ pokemon, setOpenDetail }: PokemonDetailProps) => {
 			setEvolutionChain((prev) => [
 				...prev,
 				{
-					name, 
+					name,
 					imgPath: pokemon.sprites.front_default,
 				},
 			]);
@@ -103,7 +103,7 @@ const PokemonDetail = ({ pokemon, setOpenDetail }: PokemonDetailProps) => {
 				<tr>
 					{pokemon.stats.map((item) => {
 						return (
-							<th key={item.stat.name}>
+							<th className="text-center " key={item.stat.name}>
 								<img
 									width={20}
 									src={`stat-icon/${item.stat.name}.png`}
@@ -117,7 +117,11 @@ const PokemonDetail = ({ pokemon, setOpenDetail }: PokemonDetailProps) => {
 			<tbody>
 				<tr>
 					{pokemon.stats.map((item) => {
-						return <td key={item.stat.name}>{item.base_stat}</td>;
+						return (
+							<td className="text-center " key={item.stat.name}>
+								{item.base_stat}
+							</td>
+						);
 					})}
 				</tr>
 			</tbody>
@@ -206,7 +210,9 @@ const PokemonDetail = ({ pokemon, setOpenDetail }: PokemonDetailProps) => {
 								<th className="text-center text-capitalize ">
 									{item.name}
 								</th>
-								{index != evolutionChain.length - 1 && <th></th>}
+								{index != evolutionChain.length - 1 && (
+									<th></th>
+								)}
 							</Fragment>
 						))}
 					</tr>
@@ -250,7 +256,7 @@ const PokemonDetail = ({ pokemon, setOpenDetail }: PokemonDetailProps) => {
 					></button>
 				</div>
 				<div className="row">
-					<div className="col-lg-5 col-12">
+					<div className="col-lg-5 col-12 mb-3">
 						{previewTable}
 						{statsTable}
 						{isLoading ? (

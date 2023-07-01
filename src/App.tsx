@@ -38,7 +38,7 @@ function App() {
 		function handleScrollEnd() {
 			if (
 				window.innerHeight + window.scrollY >=
-				document.body.offsetHeight -1
+				document.body.offsetHeight - 1
 			) {
 				if (!isLoading) getPokemons(nextUrl);
 			}
@@ -74,7 +74,7 @@ function App() {
 
 	return (
 		<div className="app">
-			<header className=" py-2">
+			<header className=" py-4">
 				<div className="container d-flex flex-column justify-content-center align-items-center">
 					<div className="d-flex gap-2 align-items-center ">
 						<h1 className="pixel-font">Pokedex</h1>
@@ -92,12 +92,15 @@ function App() {
 							</a>
 						</span>
 					</div>
-					<a
-						className="link-success "
-						href="https://thanhcanhit.github.io"
-					>
-						@thanhcanhit
-					</a>
+					<span>
+						Author:
+						<a
+							className="link-success ms-2"
+							href="https://thanhcanhit.github.io"
+						>
+							@thanhcanhit
+						</a>
+					</span>
 				</div>
 			</header>
 
