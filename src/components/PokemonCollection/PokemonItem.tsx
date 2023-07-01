@@ -13,7 +13,7 @@ const PokemonItem = ({ pokemon, onClick }: PokemonItemProps) => {
 
 	const statusListRender = pokemon.stats.map((item) => (
 		<div
-			className="col-6 col-sm-6 col-md-4 d-flex gap-2 align-items-center my-2"
+			className="col-6 col-sm-6 col-md-4 d-flex gap-2 align-items-center my-2 p-0 "
 			title={item.stat.name.toUpperCase()}
 			key={item.stat.name}
 		>
