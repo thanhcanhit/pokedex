@@ -94,6 +94,7 @@ function App() {
 					<SearchForm
 						searchText={searchText}
 						setSearchText={setSearchText}
+						setOpenDetail={setOpenDetail}
 					/>
 					<PokemonCollection
 						pokemons={pokemons}

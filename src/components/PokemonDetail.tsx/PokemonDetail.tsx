@@ -1,6 +1,7 @@
 import { Pokemon } from "../../interface";
 import style from "./pokemonDetail.module.css";
 import PokemonTypes from "../PokemonCollection/PokemonTypes";
+import { convertId } from "../../util/convertData";
 
 type PokemonDetailProps = {
 	pokemon: Pokemon;
@@ -89,7 +90,7 @@ const PokemonDetail = ({ pokemon, setOpenDetail }: PokemonDetailProps) => {
 							</tbody>
 						</table>
 					</div>
-					<div className="col-lg-7 col-12">
+					<div className="col-lg-7 col-12 ">
 						<table className="table table-dark table-hover table-striped ">
 							<thead>
 								<tr>
@@ -101,11 +102,11 @@ const PokemonDetail = ({ pokemon, setOpenDetail }: PokemonDetailProps) => {
 							<tbody>
 								<tr>
 									<th colSpan={1}>Id:</th>
-									<td colSpan={3}>{pokemon.id}</td>
+									<td colSpan={3}>#{convertId(pokemon.id)}</td>
 								</tr>
 								<tr>
 									<th colSpan={1}>Name:</th>
-									<td colSpan={3}>{pokemon.name}</td>
+									<td colSpan={3} className="text-capitalize ">{pokemon.name}</td>
 								</tr>
 								<tr>
 									<th colSpan={1}>Base experience:</th>
