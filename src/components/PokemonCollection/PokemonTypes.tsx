@@ -74,6 +74,7 @@ const PokemonTypes = ({ types }: PokemonTypesProps) => {
 				const typeName = item.type.name;
 				return (
 					<li
+						key={item.type.name}
 						className="list-inline-item px-2 py-1 rounded pixel-font "
 						style={{
 							fontSize: 14,

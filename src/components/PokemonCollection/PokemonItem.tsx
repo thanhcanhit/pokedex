@@ -15,6 +15,7 @@ const PokemonItem = ({ pokemon, onClick }: PokemonItemProps) => {
 		<div
 			className="col-6 col-sm-6 col-md-4 d-flex gap-2 align-items-center my-2"
 			title={item.stat.name.toUpperCase()}
+			key={item.stat.name}
 		>
 			<div
 				className="d-flex justify-content-center align-items-center p-2"

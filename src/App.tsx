@@ -2,7 +2,7 @@ import axios from "axios";
 import { useState, useEffect } from "react";
 import SearchForm from "./components/SearchForm/SearchForm";
 import PokemonCollection from "./components/PokemonCollection/PokemonCollection";
-import { Pokemon, ApiInfo } from "./interface";
+import { Pokemon } from "./interface";
 import "./App.css";
 import PokemonDetail from "./components/PokemonDetail.tsx/PokemonDetail";
 
@@ -25,11 +25,11 @@ function App() {
 
 		const apiInfoList = res.data.results;
 
-		apiInfoList.forEach(async (apiInfo: ApiInfo) => {
+		for (const apiInfo of apiInfoList) {
 			const res2 = await axios.get(apiInfo.url);
 			const pokemonData: Pokemon = res2.data;
 			setPokemons((prev) => [...prev, pokemonData]);
-		});
+		}
 		setIsLoading(false);
 	}
 
