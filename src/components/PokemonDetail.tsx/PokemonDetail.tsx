@@ -197,38 +197,40 @@ const PokemonDetail = ({ pokemon, setOpenDetail }: PokemonDetailProps) => {
 	);
 
 	const evolutionTable = (
-		<table className="table table-dark table-hover table-striped ">
-			<thead>
-				<tr>
-					{evolutionChain.map((item, index) => (
-						<Fragment key={item.name}>
-							<th className="text-center text-capitalize ">
-								{item.name}
-							</th>
-							{index != evolutionChain.length - 1 && <th></th>}
-						</Fragment>
-					))}
-				</tr>
-			</thead>
-			<tbody>
-				<tr>
-					{evolutionChain.map((item, index) => (
-						<Fragment key={item.name}>
-							<td>
-								<div className="d-flex justify-content-center">
-									<img src={item.imgPath} />
-								</div>
-							</td>
-							{index != evolutionChain.length - 1 && (
-								<td style={{ verticalAlign: "middle" }}>
-									<img src={arrowRightImg} />
+		<div className=" table-responsive">
+			<table className="table table-dark  table-hover table-striped ">
+				<thead>
+					<tr>
+						{evolutionChain.map((item, index) => (
+							<Fragment key={item.name}>
+								<th className="text-center text-capitalize ">
+									{item.name}
+								</th>
+								{index != evolutionChain.length - 1 && <th></th>}
+							</Fragment>
+						))}
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						{evolutionChain.map((item, index) => (
+							<Fragment key={item.name}>
+								<td>
+									<div className="d-flex justify-content-center">
+										<img src={item.imgPath} />
+									</div>
 								</td>
-							)}
-						</Fragment>
-					))}
-				</tr>
-			</tbody>
-		</table>
+								{index != evolutionChain.length - 1 && (
+									<td style={{ verticalAlign: "middle" }}>
+										<img src={arrowRightImg} />
+									</td>
+								)}
+							</Fragment>
+						))}
+					</tr>
+				</tbody>
+			</table>
+		</div>
 	);
 
 	return (
@@ -237,7 +239,7 @@ const PokemonDetail = ({ pokemon, setOpenDetail }: PokemonDetailProps) => {
 				className={style.layer}
 				onClick={() => setOpenDetail({ isOpen: false, pokemon: null })}
 			></div>
-			<div className={style.pokemonDetail + " w-75 mx-auto "}>
+			<div className={style.pokemonDetail + " mx-auto "}>
 				<div className="d-flex justify-content-center mb-2">
 					<button
 						type="button"

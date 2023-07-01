@@ -1,5 +1,6 @@
 .pokemonDetail {
   position: fixed;
+  width: min(800px, 100% - 16px) ;
 
   max-height: calc(100vh - 80px);
   overflow: auto;
@@ -21,6 +22,7 @@
 
 .pokemonDetail::-webkit-scrollbar {
   width: 10px;
+  height: 10px;
 }
 
 .pokemonDetail::-webkit-scrollbar-track {
