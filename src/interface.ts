@@ -22,6 +22,8 @@ export interface Pokemon {
 
 	forms: ApiInfo[];
 
+	species: ApiInfo;
+
 	sprites: {
 		back_default: string;
 		back_shiny: string;
@@ -41,4 +43,13 @@ export interface Pokemon {
 		effort: 0;
 		stat: ApiInfo;
 	}[];
+}
+
+interface Chain {
+	evolves_to: [Chain];
+	species: ApiInfo;
+}
+
+export interface EvolutionChain {
+	chain: Chain;
 }

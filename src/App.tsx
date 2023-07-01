@@ -33,8 +33,6 @@ function App() {
 		setIsLoading(false);
 	}
 
-	console.log(openDetail);
-
 	// Xử lí load thêm dữ liệu khi trượt đến cuối trang
 	useEffect(() => {
 		function handleScrollEnd() {
