@@ -4,7 +4,7 @@ import SearchForm from "./components/SearchForm/SearchForm";
 import PokemonCollection from "./components/PokemonCollection/PokemonCollection";
 import { Pokemon } from "./interface";
 import "./App.css";
-import PokemonDetail from "./components/PokemonDetail.tsx/PokemonDetail";
+import PokemonDetail from "./components/PokemonDetail/PokemonDetail";
 
 function App() {
 	const [searchText, setSearchText] = useState<string>("");
